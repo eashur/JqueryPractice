@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NinJa Cat</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('img').click(function(){
+				$(this).attr('temp', $(this).attr('src'));
+				$(this).attr('src', $(this).attr('data-alt-src'));
+				$(this).attr('data-alt-src', $(this).attr('temp'));
+			});
+		});		
+	</script>
+</head>
+<body>
+    <div>
+        <img src="img/cat0.png" data-alt-src="img/ninja0.png" temp=""><br>
+        <img src="img/cat1.png" data-alt-src="img/ninja1.png" temp=""><br>
+        <img src="img/cat2.png" data-alt-src="img/ninja2.png" temp=""><br>
+        <img src="img/cat3.png" data-alt-src="img/ninja3.png" temp=""><br>
+        <img src="img/cat4.png" data-alt-src="img/ninja4.png"temp="">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover On</title>
+    <style>
+        #container{
+            width: 680px;
+            background: grey;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width: 300px;
+            height: 270px;
+            margin: 15px;
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('img').hover(function(){
+            var image = $(this).attr('src')
+            var altImage = $(this).attr('alt')
+            $(this).attr({ 
+                "src": altImage,
+                "alt": image
+                });
+        }, function(){
+            var image = $(this).attr('src')
+            var altImage = $(this).attr('alt')
+            $(this).attr({ 
+                "src": altImage,
+                "alt": image
+                });
+        })
+    });
+</script>
+</head>
+<body>
+    <div id="container">
+        
+        <h1>Hover On Assingment</h1>
+
+        <img src="tesla1.jpeg" alt="AcMotor.jpg">
+        <img src="stjobs.jpeg" alt="apple.jpeg">
+        <img src="musk.jpeg" alt="teslacar.jpeg">
+        <img src="gooles.jpeg" alt="google.jpeg">
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#addClass').click(function(){
+                $('#red').addClass('red')
+            });
+            $('#slideToggle').click(function(){
+                $('#hiddenImage').slideToggle()
+            });
+            $('#hide').click(function(){
+                $('#hideThis').hide()
+            });
+            $('#show').click(function(){
+                $('#showThis').show()
+            });
+            $('#toggle').click(function(){
+                $('#toggleThis').toggle()
+            });
+            $('#slideDbtn').click(function(){
+                $('#slideDown').slideDown( "fast", function() {
+                    $( this )
+                    .css( "border", "2px red inset" )
+                    .filter( ".middle" )
+                        .css( "background", "yellow" )
+                        .focus();
+                });
+            });
+            $('#slideUpbtn').click(function(){
+                $('#slideUp').slideUp( "fast", function() {
+                    $( this )
+                    .css( "border", "2px black inset" )
+                    .filter( ".middle" )
+                        .css( "background", "yellow" )
+                        .focus();
+                });
+            });
+            $('#fadeInbtn').click(function(){
+                $('#fadeIn').fadeIn();
+            });
+            $('#fadeUpbtn').click(function(){
+                $('#fadeUp').fadeOut();
+            });
+            $('#addbefore').click(function(){
+                $("#before").before("<h2>Hello</h2>")
+            });
+            $('#addafter').click(function(){
+                $("#after").after("<h2>Hello</h2>")
+            });
+            $('#append').click(function(){
+                $('#appendTo').append("<span>   This is a new Span</span>")
+            });
+            $('#addhtml').click(function(){
+                $('#replace').html("<h1>   This is a new h1 </h1>")
+            });
+            $('#attr').click(function(){
+                var classVal = $('#setattr').attr("class");
+                $('#setattr').append(classVal)
+            });
+            $('#valBtn1').click(function(){
+			console.log($("#val").val())
+            })
+            $('#valBtn').click(function(){
+                $('#val').val("Hello")
+            })
+            $('#textBtn').click(function(){
+                $('#changeText').text("New Text")
+            });
+        });
+     </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Basic jQuesry Functions Assignment</h1>
+        </div>
+        <div class="functions">
+            <button id="addClass">Add Class</button>
+            <div class="jQFunctions">
+                <h1>Add Class</h1>
+                <p id="red">Click the button to add class red to this paragraph</p>
+            </div>
+        </div>
+        <div class="functions">
+            <button id="slideToggle">SlideToggle</button>
+            <div class="jQFunctions">
+                <h1>Slide Toggle</h1>
+                <p>Click the button to slide toggle the hidden image</p>
+                <img hidden src="images/github.png" alt="image" id="hiddenImage">
+            </div>
+        </div>
+        <div class="functions">
+            <button id="hide">Hide</button>
+            <div class="jQFunctions">
+                <h1>Hide</h1>
+                <p>Click the button to hide below image</p>
+                <img  src="images/expressjs.png" alt="image" id="hideThis">
+            </div>
+        </div>
+        <div class="functions">
+            <button id="show">Show</button>
+            <div class="jQFunctions">
+                <h1>Show</h1>
+                <p>Click the button to show hidden image</p>
+                <img  hidden src="images/django.png" alt="image" id="showThis">
+            </div>
+        </div>
+        <div class="functions">
+            <button id="toggle">toggle</button>
+            <div class="jQFunctions">
+                <h1>Toggle</h1>
+                <p>Click the button to Toggle the image</p>
+                <img src="images/d3.png" alt="image" id="toggleThis">
+            </div>
+        </div>
+        <div class="functions">
+            <button id="slideDbtn">SlideDown</button>
+            <div class="jQFunctions">
+                <h1>Slide Down</h1>
+                <p>Click the button to Slide down</p>
+                <img hidden src="images/django.png" alt="image" id="slideDown">
+            </div>
+        </div>
+        <div class="functions">
+            <button id="slideUpbtn">SlideUp</button>
+            <div class="jQFunctions">
+                <h1>Slide Up</h1>
+                <p>Click the button to Slide Up</p>
+                <img src="images/CSS.png" alt="image" id="slideUp">
+            </div>
+        </div>
+        <div class="functions">
+            <button id="fadeInbtn">Fade IN</button>
+            <div class="jQFunctions">
+                <h1>Fade In</h1>
+                <p>Click the button to Fade in the hidden image</p>
+                <img hidden src="images/codeigniter.png" alt="image" id="fadeIn">
+            </div>
+        </div>
+        <div class="functions">
+            <button id="fadeUpbtn">Fade Out</button>
+            <div class="jQFunctions">
+                <h1>Fade Out</h1>
+                <p>Click the button to Fade out the image</p>
+                <img src="images/codeigniter.png" alt="image" id="fadeUp">
+            </div>
+        </div>
+        <div class="functions">
+            <button id="addbefore">AddElement</button>
+            <div class="jQFunctions">
+                <h1>Add Element</h1>
+                <p id="before"> Click the button to add h2 BEFORE this paragraph</p>
+            </div>
+        </div>
+        <div class="functions">
+            <button id="addafter">AddElement</button>
+            <div class="jQFunctions">
+                <h1>Add Element</h1>
+                <p id="after"> Click the button to add h2 AFTER this paragraph</p>
+            </div>
+        </div>
+        <div class="functions">
+            <button id="append">AddElement</button>
+            <div class="jQFunctions">
+                <h1>Add Element</h1>
+                <p id="appendTo"> Click the button to append span tag to this paragraph</p>
+            </div>
+        </div>
+        <div class="functions">
+            <button id="addhtml">AddHtml</button>
+            <div class="jQFunctions">
+                <h1>Add Html</h1>
+                <p id="replace"> Click the button to replace this paragraph with h1</p>
+            </div>
+        </div>
+        <div class="functions">
+            <button id="attr">Set Attribute</button>
+            <div class="jQFunctions">
+                <h1>Set Addtribute</h1>
+                <p id="setattr" class="setAttr"> This is the class of this paragraph: </p>
+            </div>
+        </div>
+        <div class="functions">
+            <button id="valBtn">Set Value</button>
+            <button id="valBtn1">Get Value</button>
+            <input type="text" name="name" id="val">
+            <div class="jQFunctions">
+                <h1>Set Addtribute</h1>
+                <p id="setattr" class="setAttr"> This is the class of this paragraph: </p>
+            </div>
+        </div>
+        <div class="functions">
+                <button id="textBtn">Change Text</button>
+                <div class="jQFunctions">
+                    <h1>Change Text</h1>
+                    <p id="changeText"> Click the button change my text</p>
+                </div>
+        </div>
+        <div id="footer">
+
+        </div>
+
+    </div>
+</body>
+</html>

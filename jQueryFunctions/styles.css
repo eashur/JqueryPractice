@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* outline: 1px dotted red; */
+
+}
+#wrapper{
+    width: 1000px;
+    background-color: #f1f1e6;
+    margin: 0px auto;
+    padding: 15px; 
+}
+#header h1{
+    background-color: #c0b8b0;
+    margin: 10px auto;
+    text-align: center;
+}
+.jQFunctions{
+    display: inline-block;
+    width: 780px;
+    text-align: center;
+}
+p{
+    font-size: 20px;
+}
+button{
+    padding: 10px 20px;
+    background-color: rgb(221, 137, 68);
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    vertical-align: top;
+    width: 180px;
+}
+.red{
+    background-color: red;
+
+}
+img{
+    width: 50px;
+}
+.functions{
+    padding: 15px 0;
+    border-bottom: 2px solid black;
+
+}
